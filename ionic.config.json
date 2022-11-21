@@ -1,0 +1,7 @@
+{
+  "name": "routerIssue2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
