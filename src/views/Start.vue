@@ -2,26 +2,24 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title>Start</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <ion-button :router-link="{ name: 'Tab1View1' }"
-        >go to tab1/view1</ion-button
+      <ion-button
+        :router-link="{
+          name: 'Tab1',
+          params: { id: 'test' },
+        }"
+        >move to tabs 1 page</ion-button
       ><br />
-
-      <ion-button :router-link="{ name: 'Tab1View2' }"
-        >go to tab1/view2</ion-button
-      ><br />
-      <ion-button :router-link="{ name: 'Start' }">go to start</ion-button>
-
-      <ExploreContainer name="Tab 1 page" />
+      <ion-button
+        :router-link="{
+          name: 'Tab1View1',
+          params: { id: 'test' },
+        }"
+        >move to Tab1View1 page</ion-button
+      >
     </ion-content>
   </ion-page>
 </template>
@@ -39,9 +37,9 @@ import {
 import ExploreContainer from "@/components/ExploreContainer.vue";
 
 export default defineComponent({
-  name: "Tab1Page",
+  name: "StartMe",
   components: {
-    ExploreContainer,
+    // ExploreContainer,
     IonHeader,
     IonToolbar,
     IonTitle,
